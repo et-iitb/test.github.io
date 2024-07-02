@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     body{
+     background-color: #d8d8e9; 
+    }
+    .form-container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+    }
+  
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+  
+    label {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  
+    input[type="radio"] {
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  
+    /* Adjust label alignment */
+    .form-container h2 {
+      text-align: left;
+      font-size: 18px;
+    }
+  
+    .form-container label {
+      font-size: 16px;
+    }
+  
+    /* Radio button alignment */
+    .form-container input[type="radio"] {
+      margin-right: 5px;
+      margin-top: 2px; /* Adjust vertical alignment */
+    }
+  
+    .submit-btn {
+      text-align: center;
+      background-color: #4CAF50; /* Green color */
+      color: white; /* White text color */
+      padding: 10px 20px; /* Add some padding */
+      border: none; /* Remove default border */
+      border-radius: 5px; /* Add rounded corners */
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+  
+    .submit-btn:hover {
+      background-color: #3e8e41; /* Darker green on hover */
+    }
+  
+      /* New styles for centering the button container and button */
+      .button-container {
+        display: flex; /* Make the button container a flexbox container */
+        justify-content: center; /* Center the content (button) horizontally within the container */
+      }
+  
+  </style>
+
+</head>
+<body>
+  <div class="form-container">
+    <h2>Please Choose the Subject</h2>
+    <input type="radio" id="science" name="subject" value="science">
+    <label for="science">Science</label><br>
+    <input type="radio" id="other" name="subject" value="other">
+    <label for="other">Other</label><br>
+  
+    <h2>Please Choose the Grade Range</h2>
+    <input type="radio" id="grade68" name="grade" value="6-8">
+    <label for="grade68">6 - 8</label><br>
+    <input type="radio" id="grade910" name="grade" value="9-10">
+    <label for="grade910">9 - 10</label><br>
+  
+    <h2>Please Choose Language of Instruction</h2>
+    <input type="radio" id="english" name="language" value="english">
+    <label for="english">English</label><br>
+    <input type="radio" id="bilingual" name="language" value="bilingual">
+    <label for="bilingual">Bilingual</label><br>
+    <input type="radio" id="regional" name="language" value="regional">
+    <label for="regional">Regional</label><br><br>
+  
+    <div class="button-container">
+      <a href="technology.html" class="submit-btn">Next Page</a>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+
+
+
+
+
+

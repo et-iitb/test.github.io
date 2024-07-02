@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology Settings Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d8d8e9;
+      margin: 20px; /* Add some margin around the form */
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 600px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 0 auto; /* Center horizontally */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #333333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      line-height: 1.5; /* Improve readability by adjusting line spacing */
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+      <h2>Select your priority or focus for choosing high-quality EdTech.</h2>
+      <form onsubmit="return handleFormSubmit()">
+          <label>
+              <input type="checkbox" name="interest[]" value="1">
+              I want to select edtech that offer good quality content that incorporates technology features to enhance teaching and learning experiences for the chosen topic.
+          </label>
+          <br>
+          <label>
+              <input type="checkbox" name="interest[]" value="2">
+              I want to select EdTech that offers high-quality content, utilizes recommended pedagogy, and incorporates technology features to enhance teaching and learning experiences for the chosen topic.
+          </label>
+          <br>
+          <div class="button-container">
+              <input type="submit" class="submit-btn" value="Next Page">
+          </div>
+      </form>
+  </div>
+  <script>
+      function handleFormSubmit() {
+          // Prevent default form submission
+          event.preventDefault();
+
+          // Get radio button selection from URL parameter (assuming passed in URL)
+          const urlParams = new URLSearchParams(window.location.search);
+          const radioChoice = urlParams.get('answer');
+
+          // Get checkbox selections
+          const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+          let isChecked = false;
+          checkboxes.forEach(checkbox => {
+              if (checkbox.checked) {
+                  isChecked = true;
+                  return false; // Stop loop if any checkbox is checked
+              }
+          });
+
+          // Redirect based on selections
+          if (radioChoice && isChecked) {
+              if (radioChoice === "1" && isChecked) {
+                  if (checkboxes[0].checked) { // Check if checkbox 1 is selected (value="1")
+                      window.location.href = "CT.html"; // Redirect to specific page
+                  } else if (checkboxes[1].checked) { // Check if checkbox 2 is selected (value="2")
+                      window.location.href = "CPT_DCR.html"; // Redirect to specific page
+                  }
+                  // Add logic for other checkbox combinations for radio button 1
+              } else if (radioChoice === "2" && isChecked) {
+                  if (checkboxes[0].checked) { // Check if checkbox 1 is selected (value="1")
+                      window.location.href = "CT.html"; // Redirect to specific page
+                  } else if (checkboxes[1].checked) { // Check if checkbox 2 is selected (value="2")
+                      window.location.href = "CPT_IAV.html"; // Redirect to specific page
+                  }
+                  // Add logic for other checkbox combinations for radio button 2
+              }
+
+              else if (radioChoice === "3" && isChecked) {
+                  if (checkboxes[0].checked) { // Check if checkbox 1 is selected (value="1")
+                      window.location.href = "CT.html"; // Redirect to specific page
+                  } else if (checkboxes[1].checked) { // Check if checkbox 2 is selected (value="2")
+                      window.location.href = "CPT_PAL.html"; // Redirect to specific page
+                  }
+                  // Add logic for other checkbox combinations for radio button 2
+              }
+
+              else if (radioChoice === "4" && isChecked) {
+                  if (checkboxes[0].checked) { // Check if checkbox 1 is selected (value="1")
+                      window.location.href = "CT.html"; // Redirect to specific page
+                  } else if (checkboxes[1].checked) { // Check if checkbox 2 is selected (value="2")
+                      window.location.href = "CPT_GBL.html"; // Redirect to specific page
+                  }
+                  // Add logic for other checkbox combinations for radio button 2
+              }
+              // Add logic for other radio button selections
+          } else {
+              // Handle cases where no radio button or checkbox is selected
+              alert("Please select a radio button and a checkbox to proceed.");
+          }
+          return false; // Explicitly return false to prevent default form submission
+      }
+  </script>
+</body>
+  
+  
+
+</body>
+</html>

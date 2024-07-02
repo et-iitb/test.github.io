@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology Settings Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #d8d8e9;
+      margin: 20px; /* Add some margin around the form */
+      padding: 0;
+    }
+
+    .form-container {
+      max-width: 600px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 0 auto; /* Center horizontally */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #333333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 15px;
+      line-height: 1.5; /* Improve readability by adjusting line spacing */
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      display: inline-block; /* Make the buttons behave inline */
+      margin-right: 10px; /* Add some spacing between buttons */
+      text-decoration: none;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Choose Appropriate Technology Settings for Your Classroom</h2>
+
+  <label>
+    <input type="checkbox" name="interest[]" value="1">
+    My classroom is technology savvy and is equipped with devices such as Interactive flat panels and internet connection. 
+  </label>
+
+  <label>
+    <input type="checkbox" name="interest[]" value="2">
+    The projector is connected to a computer without internet for displaying locally stored presentations and videos related to the topic. 
+  </label>
+
+  <label>
+    <input type="checkbox" name="interest[]" value="3">
+    All students have access to a computer lab to explore digital content related to lessons. 
+  </label>
+
+  <label>
+    <input type="checkbox" name="interest[]" value="4">
+    Each student has a device such as a phone or tablet for interactive activities and accessing online materials that complement lessons. 
+  </label>
+
+  <div class="button-container">
+    <a href="Goals.html" class="submit-btn">Next</a>
+  </div>
+</div>
+
+</body>
+</html>
